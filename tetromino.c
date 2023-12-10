@@ -384,8 +384,7 @@ void UpdateTetromino(Tetrominus* tetromino)
           if(tetromino->shape[offset] == 1)
           {
             const int mapOffset = (y + tetromino->y) * STAGE_WIDTH + (x + tetromino->x); 
-            stage[mapOffset] = GetRandomIndex() + 1;
-            TraceLog(LOG_INFO, "offset after merged: %d", mapOffset);
+            stage[mapOffset] = GetRandomIndex() + 1; 
             EmitSFX(sfx);
           } 
         }

@@ -98,6 +98,8 @@ void ClearRow()
     {
       const int offset = y * STAGE_WIDTH + 1;
       memset(stage + offset, 0 , (STAGE_WIDTH - 2) * sizeof(int));
+      UpdateScore(CLEAR_LINE_SCORE);
+      EmitSFX2(clearSFX);
       ResetRow(y);
     }
   }
